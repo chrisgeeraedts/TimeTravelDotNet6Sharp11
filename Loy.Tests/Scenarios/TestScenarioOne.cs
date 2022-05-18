@@ -9,8 +9,8 @@ namespace Loy.Tests
         public TestScenarioOne()
         {
             // Prepare the simulated tables
-            WRITE_DATABASE.RESET();
-            READ_DATABASE<InternalSalary,Envelop <InternalSalary>>.RESET();
+            //WRITE_DATABASE.RESET();
+            //READ_DATABASE<InternalSalary,Envelop <InternalSalary>>.RESET();
         }
 
 
@@ -19,10 +19,14 @@ namespace Loy.Tests
         Guid primaryKey;
         public void Prepare()
         {
+
+            SalaryDataStore _dataStore = new SalaryDataStore();
+            _dataStore.STORE_EVENTS();
+
+
             timeManager = new TimeTravelManager<Salary, InternalSalary, Envelop<InternalSalary>>
                 (
-                READ_DATABASE<InternalSalary, Envelop<InternalSalary>>.InternalSalaries, 
-                READ_DATABASE<InternalSalary, Envelop<InternalSalary>>.InternalSalaryEnvelops
+                    _dataStore
                 );
 
 
@@ -30,10 +34,10 @@ namespace Loy.Tests
             //timeManager = new SalaryTimeManager();
 
             // Create salary object
-            Console.WriteLine("### INSERTING NEW SALARY");
-            var salary = new Salary(50000, SalaryType.SV_LOON, "SV loon uit aanlevering 2021");
-            timeManager.CREATE_OVERWRITE(salary, new DateTime(2020, 1, 1), new DateTime(2020, 1, 1), "Chris eeraedts");
-            Console.WriteLine(Environment.NewLine);
+            //Console.WriteLine("### INSERTING NEW SALARY");
+            //var salary = new Salary(50000, SalaryType.SV_LOON, "SV loon uit aanlevering 2021");
+            //timeManager.CREATE_OVERWRITE(salary, new DateTime(2020, 1, 1), new DateTime(2020, 1, 1), "Chris eeraedts");
+            //Console.WriteLine(Environment.NewLine);
 
             //Console.WriteLine("### Opvoeren toekomstig salaris");
             //salary.SalaryAmount = 55000;
@@ -47,7 +51,7 @@ namespace Loy.Tests
             //timeManager.CREATE_OVERWRITE(salary, new DateTime(2021, 4, 21), new DateTime(2021, 4, 21), "Chris Geeraedts");
 
 
-            primaryKey = salary.ExternalPrimaryKey;
+            //primaryKey = salary.ExternalPrimaryKey;
             Console.WriteLine(Environment.NewLine);
         }
 

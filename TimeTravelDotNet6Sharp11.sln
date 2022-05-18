@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loy.Data", "Loy.Data\Loy.Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loy.Tests", "Loy.Tests\Loy.Tests.csproj", "{47DB8B07-E1A1-40D9-8984-18A74E963CA5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loy.API", "Loy.API\Loy.API.csproj", "{E3DB1EA2-275E-4373-AC5D-003177D31BDA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{47DB8B07-E1A1-40D9-8984-18A74E963CA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47DB8B07-E1A1-40D9-8984-18A74E963CA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47DB8B07-E1A1-40D9-8984-18A74E963CA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3DB1EA2-275E-4373-AC5D-003177D31BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3DB1EA2-275E-4373-AC5D-003177D31BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3DB1EA2-275E-4373-AC5D-003177D31BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3DB1EA2-275E-4373-AC5D-003177D31BDA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

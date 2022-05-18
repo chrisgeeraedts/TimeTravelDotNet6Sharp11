@@ -1,19 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.5" />
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Data.TimeTravel.Shared\Data.TimeTravel.Shared.csproj" />
     <ProjectReference Include="..\Logic.TimeTravel.Shared\Logic.TimeTravel.Shared.csproj" />
+    <ProjectReference Include="..\Logic.TimeTravel\Logic.TimeTravel.csproj" />
+    <ProjectReference Include="..\Loy.Data\Loy.Data.csproj" />
   </ItemGroup>
 
 </Project>

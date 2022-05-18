@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Data.TimeTravel.Shared
 {
-    public static class READ_DATABASE<TInternal, TEnvelop>
+    public class READ_DATABASE<TInternal, TEnvelop>
     {
-        public static void RESET()
-        {
-            InternalSalaries = new List<TInternal>();
-            InternalSalaryEnvelops = new List<TEnvelop>();
-        }
+        public List<TInternal> InternalEntities { get; set; }
+        public List<TEnvelop> EntityEnvelops { get; set; }
 
-        public static List<TInternal> InternalSalaries { get; set; }
-        public static List<TEnvelop> InternalSalaryEnvelops { get; set; }
+        public void RESET()
+        {
+            InternalEntities = new List<TInternal>();
+            EntityEnvelops = new List<TEnvelop>();
+        }
 
     }
 }

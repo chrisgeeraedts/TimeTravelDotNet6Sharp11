@@ -1,10 +1,8 @@
 ﻿using Data.TimeTravel.Shared;
-using System;
-using System.Collections.Generic;
 
 namespace Loy.Data
 {
-    public class Salary : ISalary, IConstructor<InternalSalary, Envelop<InternalSalary>>
+    public class Salary : ISalary, IConstructor<InternalSalary, Envelop<InternalSalary>>, IEntity
     {
 
         public Salary(decimal salaryAmount, SalaryType salaryType, string salaryDescription)
