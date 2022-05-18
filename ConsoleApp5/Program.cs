@@ -1,8 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using ConsoleApp5;
-using TimeTravelTest;
-using TimeTravelTest.Scenarios;
+using Loy.Tests;
 
 
 /// Scenario
